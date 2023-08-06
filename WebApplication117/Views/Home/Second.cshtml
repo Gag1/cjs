@@ -1,0 +1,30 @@
+﻿@using WebApplication117.Controllers;
+@model WebApplication117.Models.User;
+@{
+    Layout = null;
+}
+<table border="1">
+    <tr>
+
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Message</th>
+
+    </tr>
+
+
+    @foreach (var p in @ViewBag.Data)
+    {
+        <tr>
+
+            <td>@p.FirstName</td>
+            <td>@p.LastName</td>
+            <td>@p.Phone</td>
+            <td>@p.Email</td>
+            <td>@p.Message</td>
+
+        </tr>
+    }
+</table>

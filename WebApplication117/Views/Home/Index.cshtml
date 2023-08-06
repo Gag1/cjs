@@ -1,0 +1,75 @@
+﻿@model WebApplication117.Models.User;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooks</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="coll">
+                <h2>BROOKS</h2>
+                <span>PSYCHOLOGY</span>
+            </div>
+            <div class="coll">
+                <ul>
+                    <li>About Me</li>
+                    <li>My Services</li>
+                    <li>Testimonials</li>
+                    <li>Charges</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="s1">
+        <div class="home">
+            <div class="row row-home">
+                <div class="coll">
+                    <h2>I Am Dr.Koryun</h2><br><br>
+                    <span>MD (Psychology)</span>
+
+                    <hr> <br>
+                    <p>
+                        Nullam rutrum mi dis lobortis lacinia, atque ab perferendis.
+                        Quisquam, hymenaeos laboriosam aliquid vestibu.
+                    </p>
+                    <br><br>
+                    <a href="#call">Book Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="call" style="overflow-y: scroll;" class="s2">
+        <div class="row-appointment">
+            <div class="coll">
+                <h2>Your Oral Health Matters to Us</h2>
+                <br>
+                <hr class="line">
+                <p>Get Brighter Smile <br> from London's Best <br> Dentists</p>
+            </div>
+            <div class="coll">
+                <form method="post" action="~/Home/Insert">
+                    <input asp-for=FirstName placeholder="First Name" type="text">
+                    <input asp-for=LastName placeholder="Last Name" type="text">
+                    <input asp-for=Phone placeholder="Phone" type="number">
+                    <input asp-for=Email placeholder="Email" type="email">
+                    <textarea asp-for=Message  placeholder="Message" cols="50" rows="5"></textarea>
+                    <input class="submit" value="Send" type="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
